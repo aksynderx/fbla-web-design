@@ -1,0 +1,66 @@
+<!-- author: aniruddh doki -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>notable website features</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/universal.css">
+    <link rel="stylesheet" href="./css/features.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="./javascript/sidebar.js"></script>
+    <link rel="stylesheet" href="./css/navbars.css">
+</head>
+
+<body>
+    <!-- navbar -->
+    <div class="w3-bar w3-top w3-opacity-min w3-black">
+        <button onclick="openSidebar()" class="w3-bar-item">☰</button>
+        <a href="./index.html" class="w3-bar-item w3-button w3-mobile w3-center headNavLinks" target="_blank">home</a>
+        <a href="./photography.html" class="w3-bar-item w3-button w3-mobile w3-center headNavLinks" target="_blank">photography</a>
+        <a href="./artwork.html" class="w3-bar-item w3-button w3-mobile w3-center headNavLinks" target="_blank">artwork</a>
+        <a href="./features.html" class="w3-bar-item w3-button w3-mobile w3-center headNavLinks" target="_blank">features</a>
+    </div>
+
+    <!-- sidebar for intra-page navigation -->
+    <div class="w3-sidebar w3-bar-block w3-animate-left" id="sidebar">
+        <button onclick="closeSidebar()" class="w3-padding-small"> &times; </button>
+        <a href="#navigation" class="w3-bar-item w3-button">navigation</a>
+        <a href="#content" class="w3-bar-item w3-button">website content</a>
+    </div>
+
+    <!-- w3.css usage -->
+    <div id="w3CSSUsage">
+        <div class="w3-padding-32">
+            <h1 class="w3-center"> some info:</h1>
+            <p class="w3-center">W3.CSS was created by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3schools.com</a> as a simpler, but still powerful, alternative to Bootstrap. W3.CSS does not require any JavaScript packages to run, which makes it easy to implement into any website. This package was used extensively in this project.</p>
+            <p class="w3-center">I used many tutorials for this project, especially for features such as the slideshow and the parallax images. These tutorials can be found on <a href="w3schools.com" target="_blank">w3schools.com</a>.</p>
+            <div class="w3-card w3-padding-large" id="navigation">
+                <h4 class="w3-center">navigation</h4>
+                <p>W3.CSS offers robust classes for the creation of navigational aides such as header and footer navigation bars, as well as sidebars. Usage of these classes can be observed throughout the entirety of the website.</p>
+                <p>The classes used for the footer and header navigation bars are almost identical, save for one. The bars for both was created by using the <code>w3-bar</code> class. To stick the header and footer navigation bars to the top and bottom of the viewport, the <code>w3-top</code> & <code>w3-bottom</code> classes were used, respectively. The black color and slightly transparent nature of these bars was acheived by using the <code>w3-opacity-min</code> & <code>w3-black</code> classes. Each button was created using <code>a</code> elements, and they were styled to look like buttons using the <code>w3-button</code> class. They were designated as bar items using the <code>w3-bar-item</code> class, and their text was centered using the <code>w3-center</code> class.</p>
+                <p>The social media icons present in the footer navigation bar come from <a href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" target="_blank">this library</a>. Accessing this library was simple; each social media icon had its own CSS class, so all I had to do was include the <code>fa</code> & <code>fa-facebook/fa-instagram/fa-linkedin/fa-youtube</code> class, depending on which social media I wanted the icon of.</p>
+                <p>Creating the sidebar was a little bit more complicated than the header and footer navigation bars, however it was still relatively easy to implement. Instead of using the <code>w3-bar</code> class, I had to use the <code>w3-sidebar</code> class. This created a bar at the side of the viewport, rather than the top or bottom. Designating it as a <code>w3-bar-block</code> allowed me to make it a block item. I animated its opening with the <code>w3-animate-left</code> class. I placed an icon for the sidebar in the header navigation bar, and I connected the button a function that opened the sidebar upon mouse click. I also created a button within the sidebar that was connected to a function that closed the sidebar upon mouse click, as well as a method to close the sidebar when the user clicks outside of the sidebar. In order to close the sidebar upon a mouse click outside the sidebar, I created a variable called <code>isOpen</code> which was either true or false, depending on whether or not the sidebar was open. If <code>isOpen</code> was true, then a closure would trigger upon each mouse click. This closure calculated the width of the sidebar, which gave the right x coordinate of the sidebar, and if the x coordinate of the mouse click was greater than the right x coordinate of the sidebar, then the sidebar would close.</p>
+            </div>
+            <div class="w3-card w3-padding-large" id="content">
+                <h4 class="w3-center">website content</h4>
+                <p>W3.CSS offers classes for arranging elements in a container. By classifiying a <code>div</code> element with the <code>w3-display-container</code> class, I was able to quickly position div elements to either the top left, top middle, top right, left, middle, right, bottom left, bottom middle, or bottom right positions. I used this, well, class of classes to position everything from photo portolfios to the about section on the main page.</p>
+                <p>In order to achieve the parallax effect seen as the main design theme of the website, I used a base class to provide the basic styling needed and another class to assign the background image of each element. I had to attach the background image so that it was fixed, and I also had to make sure that the background image did not repeat.</p>
+                <p>A major feature of this website is its "ability" to send an email to Athul through the website. I put ability in quotes since this feature does not actually work as I would need to finish the backend of this website. However, this is a notable feature as it makes use of a modal popup to confirm the user's input, as well as an alert to let the user know that the email has been sent.</p>
+                <p>The photography site utilizes a slideshow to display Athul's photos. This slideshow was created using a code snippet from w3schools' tutorial on slideshows (cited in the photorgraphy.js file). The photos are loaded in dynamically through JavaScript, as doing so would be much easier than adding a new html image element each time we wanted to add another image. I created a class called <code>Photo</code> and took a source and an alt in the constructor. A method called <code>insert()</code> takes the attributes collected during the initialization of the object and creates an HTML image element and adds it to the div element where the slideshow is contained. This way, any time we wanted to add another photo to his portfolio, all we would have to do is initialize another <code>Photo</code> object and pass the location of the image and an alt for it as arguments.</p>
+                <p>The artwork site simply showed his art and also where to contact him to inquire for an order. Having the ability to purchase his prints off of the website could potentially lead to having more orders than product available. Plus, this would also provide an avenue to contact Athul for custom work.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- social media links -->
+    <div class="w3-bar w3-bottom w3-opacity-min w3-black">
+        <a href="https://www.facebook.com/athulmanju.vikas/" class="w3-bar-item w3-button w3-mobile w3-center fa fa-facebook" target="_blank"></a>
+        <a href="https://www.instagram.com/athul_vikas/" class="w3-bar-item w3-button w3-mobile w3-center fa fa-instagram" target="_blank"></a>
+        <a href="https://www.linkedin.com/in/athul-vikas-25b14a1b4/" class="w3-bar-item w3-button w3-mobile w3-center fa fa-linkedin" target="_blank"></a>
+        <a href="https://www.youtube.com/channel/UCgok42AfcFy4w2O8bVj9VCA/videos?view_as=subscriber" class="w3-bar-item w3-button w3-mobile w3-center fa fa-youtube" target="_blank"></a>
+    </div>
+</body>
+
+</html>

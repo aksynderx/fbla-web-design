@@ -1,0 +1,105 @@
+<!-- author: aniruddh doki -->
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Athul Vikas Photography</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/universal.css">
+    <link rel="stylesheet" href="./css/photography.css">
+    <script src="./javascript/photography.js"></script>
+    <script src="./javascript/sidebar.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/navbars.css">
+    <link rel="stylesheet" href="./css/parallaxImagesBase.css">
+</head>
+
+<body>
+    <!-- navbar -->
+    <div class="w3-bar w3-top w3-opacity-min w3-black">
+        <button onclick="openSidebar()" class="w3-bar-item">☰</button>
+        <a href="./index.html" class="w3-bar-item w3-button w3-mobile w3-center headNavLinks" target="_blank">home</a>
+        <a href="./photography.html" class="w3-bar-item w3-button w3-mobile w3-center headNavLinks" target="_blank">photography</a>
+        <a href="./artwork.html" class="w3-bar-item w3-button w3-mobile w3-center headNavLinks" target="_blank">artwork</a>
+        <a href="./features.html" class="w3-bar-item w3-button w3-mobile w3-center headNavLinks" target="_blank">features</a>
+    </div>
+
+    <!-- sidebar for intra-page navigation -->
+    <div class="w3-sidebar w3-bar-block w3-animate-left" id="sidebar">
+        <button onclick="closeSidebar()" class="w3-padding-small"> &times; </button>
+        <a href="#home" class="w3-bar-item w3-button">scroll to top</a>
+        <a href="#portfolio" class="w3-bar-item w3-button">portfolio</a>
+        <a href="#appointments" class="w3-bar-item w3-button">appointments</a>
+    </div>
+
+    <!-- opening page with title -->
+    <div class="photographyBackgroundImageOne parallaxImages" id="home"></div>
+    <div class="w3-display-middle">
+        <h2 class="w3-text-white w3-center" id="photography">photography</h2>
+    </div> 
+
+    <!-- portfolio header -->
+    <div class="w3-container">
+        <div class="w3-center"><h1>portfolio</h1></div>
+    </div>
+
+    <!-- portfolio -->
+    <div class="w3-display-container photographyBackgroundImageTwo parallaxImages" id="portfolio">
+        <div class="w3-display-middle" id="aa">
+            <div class="w3-content w3-display-container" id="slideshowContainer">
+                <button class="w3-display-middle w3-button w3-black" onclick="loadPortfolio()" id="loadPortfolio">load portfolio</button>
+                <button class="w3-display-left w3-button w3-black" onclick="plusDivs(-1)">&#10094;</button>
+                <button class="w3-display-right w3-button w3-black" onclick="plusDivs(1)">&#10095;</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- appointments header -->
+    <div class="w3-container">
+        <div class="w3-center"><h1>appointments</h1></div>
+    </div>
+
+    <!-- appointment form -->
+    <div class="w3-display-container photographyBackgroundImageThree parallaxImages" id="appointments">
+        <div class="w3-display-middle">
+            <div class="contactForm w3-container w3-content w3-text-white w3-black w3-opacity-min" id="contactForm">
+                <p>Hey! Athul here! Fill out the form below to contact me about scheduling an an appointment for a photoshoot!</p>
+                <p>Please go into detail about why you are looking to book a photoshoot and include dates. Thank you!</p>
+                <form>
+                    <p><label for="firstName">First Name: </label></p>
+                    <p><input type="text" id="firstName"></p>
+                    <p><label for="lastName">Last Name: </label></p>
+                    <p><input type="text" id="lastName"></p>
+                    <p><label for="emailAddress">Email Address: </label></p>
+                    <p><input type="text" id="emailAddress"></p>
+                    <p><label for="message">Message: </label></p>
+                    <p><input type="text" id="message"></p>
+                    <p><button onclick="initialSubmit()">Submit</button></p>
+                </form>
+            </div>
+            <div id="confirmation" class="w3-modal">
+                <div class="w3-modal-content w3-animate-zoom">
+                    <div class="w3-container contactForm w3-content w3-text-white w3-black w3-opacity-min">
+                        <h3>Confirm Message: </h3>
+                        <p id="firstNameConfirm">First Name: </p>
+                        <p id="lastNameConfirm">Last Name: </p>
+                        <p id="emailAddressConfirm">Email Address: </p>
+                        <p id="messageConfirm">Message: </p>
+                        <p><button onclick="edit()">Edit</button><button onclick="finalSubmit()">Submit</button></p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- social media links -->
+    <div class="w3-bar w3-bottom w3-opacity-min w3-black">
+        <a href="https://www.facebook.com/athulmanju.vikas/" class="w3-bar-item w3-button w3-mobile w3-center fa fa-facebook" target="_blank"></a>
+        <a href="https://www.instagram.com/athul_vikas/" class="w3-bar-item w3-button w3-mobile w3-center fa fa-instagram" target="_blank"></a>
+        <a href="https://www.linkedin.com/in/athul-vikas-25b14a1b4/" class="w3-bar-item w3-button w3-mobile w3-center fa fa-linkedin" target="_blank"></a>
+        <a href="https://www.youtube.com/channel/UCgok42AfcFy4w2O8bVj9VCA/videos?view_as=subscriber" class="w3-bar-item w3-button w3-mobile w3-center fa fa-youtube" target="_blank"></a>
+    </div>
+</body>
+
+</html>

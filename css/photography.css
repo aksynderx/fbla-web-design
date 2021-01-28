@@ -1,0 +1,49 @@
+/* author: aniruddh doki */
+html, body {
+    height: 100%;
+    scroll-behavior: smooth;
+}
+
+table, input {
+    width: 100%;
+    background-color: white;
+}
+
+td {
+    padding: 5px;
+}
+
+.photographyBackgroundImageOne {
+    background-image: url("./images/creek.jpg");
+}
+
+.photographyBackgroundImageTwo {
+    background-image: url("./images/creekLongExposure.jpg");
+}
+
+.photographyBackgroundImageThree {
+    background-image: url("./images/hardrock.jpg");
+}
+
+.contactForm {
+    padding: 25px;
+    font-size: 1em;
+    line-height: 30px;
+}
+
+.portfolioSlideshow {
+    width: 100%;
+}
+
+#photography {
+    padding: 25px;
+    width: 98vmax;
+}
+
+#message {
+    min-height: 150px;
+}
+
+#aa {
+    width: 75%;  
+}

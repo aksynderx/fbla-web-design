@@ -1,0 +1,8 @@
+html {
+    background-color: paleturquoise;}
+
+#navigation, #content {
+    width: 49.5%;
+    display: inline-block;
+    vertical-align: top;
+}
