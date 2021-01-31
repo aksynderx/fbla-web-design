@@ -1,0 +1,37 @@
+html {
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    scroll-behavior: smooth;
+    height: 100%;
+    background-color: #eeeeee;
+}
+
+img {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.line {
+    border-bottom: thin solid#00adb5;
+}
+
+.backgroundColor {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.socials {
+    color: #eeeeee;
+}
+
+#opening {
+    height: 100vh;
+}
+
+#opening {
+    background-image: url(./images/openingBackground.JPG);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    min-height: 100%;
+}
