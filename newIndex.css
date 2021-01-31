@@ -16,16 +16,19 @@ h1, h5 {
     background-color: rgba(0, 0, 0, 0.6);
 }
 
-.portfolioImages {
-    width: 75%;
+#portfolio, #opening, .carousel {
+    height: 100vh;
 }
 
 #opening {
-    height: 100vh;
     background-image: url(./openingBackground.JPG);
     background-attachment: fixed;
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100%;
+}
+
+#portfolio {
+    max-width: 75%;
 }
