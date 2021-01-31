@@ -12,6 +12,14 @@ h1, h5 {
     border-bottom: thin solid#00adb5;
 }
 
+.backgroundColor {
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.portfolioImages {
+    width: 75%;
+}
+
 #opening {
     height: 100vh;
     background-image: url(./openingBackground.JPG);
@@ -20,8 +28,4 @@ h1, h5 {
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100%;
-}
-
-.backgroundColor {
-    background-color: rgba(0, 0, 0, 0.6);
 }
