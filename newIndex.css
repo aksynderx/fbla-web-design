@@ -19,6 +19,10 @@ img {
     background-color: rgba(0, 0, 0, 0.6);
 }
 
+.socials {
+    color: #eeeeee;
+}
+
 #opening {
     height: 100vh;
 }
