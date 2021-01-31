@@ -5,8 +5,10 @@ html {
     background-color: #eeeeee;
 }
 
-h1, h5 {
-    color: #eeeeee;
+img {
+    max-width: 1000px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .line {
@@ -17,7 +19,7 @@ h1, h5 {
     background-color: rgba(0, 0, 0, 0.6);
 }
 
-#portfolio, #opening, .carousel {
+#opening {
     height: 100vh;
 }
 
@@ -28,8 +30,4 @@ h1, h5 {
     background-repeat: no-repeat;
     background-size: cover;
     min-height: 100%;
-}
-
-#portfolio {
-    max-width: 75%;
 }
